@@ -1849,15 +1849,54 @@
                 
                 document.getElementById('loginScreen').classList.add('hidden');
                 document.getElementById('mainApp').classList.remove('hidden');
-            });
- ];
+            }
+            
+            // Add some initial sample data
+            documents = [
+                {
+                    number: 'SPK-2023-001',
+                    date: '2023-05-15',
+                    type: 'SPK',
+                    description: 'Surat Perintah Kerja untuk renovasi kantor',
+                    value: 15000000,
+                    status: 'Lengkap',
+                    responsible: 'PPKOM',
+                    destination: 'PT Maju Jaya Abadi', 
+                    pic: 'Bagian Keuangan', 
+                    sentDate: '2023-05-16',
+                    returnDate: '2023-05-25'
+                },
+                {
+                    number: 'KWT-2023-042',
+                    date: '2023-05-20',
+                    type: 'Kwitansi',
+                    description: 'Pembayaran pembelian peralatan kantor',
+                    value: 2500000,
+                    status: 'Tidak Lengkap',
+                    responsible: 'Bendahara Pengeluaran',
+                    destination: 'CV Sukses Mandiri', 
+                    pic: 'Bagian Verifikasi', 
+                    sentDate: '2023-05-21',
+                    returnDate: ''
+                },
+                {
+                    number: 'BA-2023-078',
+                    date: '2023-06-01',
+                    type: 'Berita Acara',
+                    description: 'Berita acara serah terima pekerjaan',
+                    value: 8500000,
+                    status: 'Perlu Verifikasi',
+                    responsible: 'PPTK',
+                    destination: 'PT Karya Utama', 
+                    pic: 'Dalam Proses Pengiriman', 
+                    sentDate: '2023-06-02',
+                    returnDate: '2023-06-10'
+                }
+            ];
             renderDocuments(); // Initial render of documents
             updateStatusChart(); // Initial chart rendering
         });
-
-        
- const tbody = document.querySelector("#data-dokumen-keuangan tbody");
-
+const tbody = document.querySelector("#data-dokumen-keuangan tbody");
     database.forEach(item => {
       const row = document.createElement("tr");
       row.innerHTML = `
