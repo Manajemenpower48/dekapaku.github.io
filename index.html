@@ -1896,23 +1896,6 @@
             renderDocuments(); // Initial render of documents
             updateStatusChart(); // Initial chart rendering
         });
-const tbody = document.querySelector("#data-dokumen-keuangan tbody");
-    database.forEach(item => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-        <td>${item.number}</td>
-        <td>${item.date}</td>
-        <td>${item.type}</td>
-        <td>${item.description}</td>
-        <td>${item.value}</td>
-        <td>${item.responsible}</td>
-        <td>${item.destination}</td>
-        <td>${item.pic}</td>
-        <td>${item.sentDate}</td>
-        <td>${item.returnDate}</td>
-      `;
-      tbody.appendChild(row);
-    });
     </script>
 </body>
 </html>
